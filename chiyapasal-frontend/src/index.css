@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* You can add your own custom CSS here if needed */
+@media print {
+  /* Hide everything on the page */
+  body * {
+    visibility: hidden;
+  }
+  /* Show only the receipt container */
+  #printable-receipt, #printable-receipt * {
+    visibility: visible;
+  }
+  #printable-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: none;
+  }
+  /* Hide the action buttons during printing */
+  .no-print {
+    display: none;
+  }
+}
